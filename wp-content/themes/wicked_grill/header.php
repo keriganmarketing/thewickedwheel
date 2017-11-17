@@ -33,7 +33,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri() ?>/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script data-cfasync="true" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.1/jquery.flexslider-min.js"></script>
 <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv/dist/html5shiv.js"></script>
@@ -58,7 +58,6 @@
                         <div id="logo" class="four columns">
                         <a class="home-link" title="Panama City Beach Southern Food Wicked Wheel logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                             <img src="<?php bloginfo('template_url');?>/images/panama-city-beach-southern-food-logo.png?new" alt="Panama City Beach Southern Food Wicked Wheel logo"/>
-                            
                         </a>
                         </div>
                         <div id="main-nav" class="eight columns">

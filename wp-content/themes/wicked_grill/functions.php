@@ -234,6 +234,13 @@ add_action( 'widgets_init', 'wicked_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wicked_scripts() {
+
+    remove_action('wp_head', 'rsd_link');
+    remove_action('wp_head', 'wlwmanifest_link');
+    remove_action('wp_head', 'wp_generator');
+    remove_action('wp_head', 'start_post_rel_link');
+    remove_action('wp_head', 'index_rel_link');
+    remove_action('wp_head', 'adjacent_posts_rel_link');
 	
 	//wp_enqueue_style( 'wicked-respond', get_template_directory_uri().'/css/skeleton.css' );
 	//wp_enqueue_style( 'wicked-flexstyle', get_template_directory_uri().'/js/flexslider/flexslider.css' );

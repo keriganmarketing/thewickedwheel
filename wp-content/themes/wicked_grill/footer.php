@@ -65,8 +65,8 @@
         </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-<script async src="https://i.simpli.fi/dpx.js?cid=28739&action=100&segment=cnhiwickedwheelrt&m=1&sifi_tuid=26341"></script>
-<script type="text/javascript" >
+<script data-cfasync="true" async src="https://i.simpli.fi/dpx.js?cid=28739&action=100&segment=cnhiwickedwheelrt&m=1&sifi_tuid=26341"></script>
+<script data-cfasync="true" type="text/javascript" >
 /**
  * navigation.js
  *
@@ -171,7 +171,7 @@ $(window).load(function() {
 	});
 });
 </script>
-<script>
+<script data-cfasync="true">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
