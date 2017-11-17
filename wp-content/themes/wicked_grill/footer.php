@@ -66,7 +66,7 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <script data-cfasync="true" async src="https://i.simpli.fi/dpx.js?cid=28739&action=100&segment=cnhiwickedwheelrt&m=1&sifi_tuid=26341"></script>
-<script data-cfasync="true" type="text/javascript" >
+<script type="text/javascript" >
 /**
  * navigation.js
  *
