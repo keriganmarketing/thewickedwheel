@@ -20,11 +20,11 @@ get_header(); ?>
                             	<header class="entry-header">
 									<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
                                 </header><!-- .entry-header -->
-                            
+
                                 <div class="entry-content">
 									<?php the_content(); ?>
                                     <div class="events-big-list">
-                                    <?php 						
+                                    <?php
                                         $request = array(
                                               'posts_per_page'   => -1,
                                               'offset'           => 0,
@@ -39,21 +39,11 @@ get_header(); ?>
                                                     'key'	  	=> 'events_end_date',
                                                     'value'	  	=> date('Ymd'),
                                                     'compare' 	=> '>=',
-                                                  ), 
-                                                  /*array(
-                                                    'key'	  	=> 'events_end_date',
-                                                    'value'	  	=> '',
-                                                    'compare' 	=> '==',
-                                                  ), */
-                                                  /*array(
-                                                    'key'	  	=> 'events_recur',
-                                                    'value'	  	=> 'none',
-                                                    'compare' 	=> '!=',
-                                                  ), */
+                                                  )
                                               ),
-                                              
+
                                           );
-                                          
+
                                           $eventlist = get_posts( $request );
                                           $u = 1;
                                           foreach($eventlist as $event){
@@ -73,9 +63,9 @@ get_header(); ?>
                                               $thumbnail = get_field('event_photo', $id);
                                               $specialinfo = '';
                                               $specialname = '';
-                                               
+
                                                 $special = get_field('special', $id);
-                                                                                  
+
                                                 if($bandinfo){
                                                     foreach($bandinfo as $band){
                                                         $bandid = $band->ID;
@@ -89,16 +79,16 @@ get_header(); ?>
                                                         $band_website = get_field('band_website', $bandid);
                                                     }
                                                 }
-                                                
+
                                               //shorten for pretty titles
                                               $maxchar = 60;
                                               if (strlen($title) > $maxchar) {
                                                     $title = substr($title, 0, strrpos(substr($title, 0, $maxchar), ' ')).'...';
                                               }
-                                              
+
                                               if($end_date == ''){ $end_date = $start_date; } //no end date. assume it's the same as start
-                                              
-                                                if($start_date != $end_date){ 
+
+                                                if($start_date != $end_date){
                                                     if($recur == 'none'){
                                                           $fulldate = date('M j', strtotime($start_date)).' &ndash; '.date('M j', strtotime($end_date));
                                                           if($start_time != ''){ $fulldate .= ', '.date('g:i a', $start_time); }
@@ -120,9 +110,9 @@ get_header(); ?>
                                                           //$new_date = advancedate($start_date,"+1 day");
                                                          // $end_date = advancedate($end_date,"+1 day");
                                                       }
-                                                      
+
                                                   }else{ //end date same as start date
-                                                      
+
                                                       if($recur == 'none'){
                                                           $fulldate = date('M j', strtotime($start_date));
                                                           if($start_time != ''){ $fulldate .= ', '.date('g:i a', $start_time); }
@@ -143,19 +133,20 @@ get_header(); ?>
                                                           if($end_time != '' && $end_time != $start_time){ $fulldate .= ' &ndash; '.date('g:i a', $end_time); }
                                                           //$new_date = advancedate($start_date,"+1 day");
                                                           //$end_date = advancedate($end_date,"+1 day");
-                                                              
+
                                                       }
                                                   }
-                                                 
+
+
                                                 ?>
                                                 <div class="event-item">
                                                     <div class="event-thumbnail four columns">
                                                         <?php if($thumbnail) { ?>
                                                             <img src="<?php echo $thumbnail['url']; ?>" alt="<?php echo $thumbnail['alt']; ?>" />
-                                                        <? } ?>     
+                                                        <?php } ?>
                                                     </div>
                                                     <div class="event-details eight columns" >
-                                                        <h2 class="title"><?php echo $title ?></h2>
+                                                        <h2 class="title"><?php echo $title; ?></h2>
                                                         <?php if(!$special){?>
                                                         <div class="time"><div class="start-date twelve columns"><?php echo $fulldate; ?> @ <?php echo $location; ?></div></div>
                                                         <?php }else{ ?>
@@ -172,20 +163,21 @@ get_header(); ?>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="separator twelve columns"><hr /></div>  
-                                            <?php	
+                                                <div class="separator twelve columns"><hr /></div>
+                                            <?php
                                             $u++;
-                                            
+
                                           }
+
                                         wp_reset_query(); ?>
-                                	</div>        
+                                	</div>
                             	</div>
                                 <?php endwhile; // end of the loop. ?>
             				</div>
         				</article>
         			</div>
             	</div>
-            </div>                
+            </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div>
