@@ -34,7 +34,7 @@
   <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9755.278911416515!2d-85.81204683202519!3d30.179653033626817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x889388d5053e9af9%3A0xc210e5bc0c1a606d!2sThe+Wicked+Wheel+Bar+%26+Grill!5e0!3m2!1sen!2sus!4v1456236636683" allowfullscreen></iframe>
   					</div>
                     </div>
-                </div>    
+                </div>
              </div>
 		</div>
 	</div>
@@ -58,12 +58,15 @@
                 <div class="sig six columns">
                     <p class="siteby"><img src="<?php echo get_template_directory_uri(); ?>/images/kma.png" alt="Designed &amp; Programmed by Kerigan Marketing Associates" />Site by <a target="_blank" href="http://keriganmarketing.com">KMA</a>.</p>
                 </div>
-                
             </div>
-            
         </div>
-        </div>
+		</div>
 	</footer><!-- #colophon -->
+	<div class="container-fluid">
+		<div class="row" style="padding: 20px; background: #E27708; color: #fff; text-align: center; position: fixed; bottom:0; min-width:100%; z-index: 9999999;">
+			<p>The Wicked Wheel will be closed from December 11th &ndash; December 25th for the Holiday Season.</p>
+		</div>
+	</div>
 </div><!-- #page -->
 <script data-cfasync="true" async src="https://i.simpli.fi/dpx.js?cid=28739&action=100&segment=cnhiwickedwheelrt&m=1&sifi_tuid=26341"></script>
 <script data-cfasync="false" type="text/javascript" >
@@ -143,7 +146,7 @@ $(window).load(function() {
 		animation: "fade",
 		start: function(slider) { // Fires when the slider loads the first slide
 		var slide_count = slider.count - 1;
-	
+
 		  $(slider)
 			.find('img.lazy:eq(0)')
 			.each(function() {
@@ -159,7 +162,7 @@ $(window).load(function() {
 			  current    = index,
 			  nxt_slide  = current + 1,
 			  prev_slide = current - 1;
-	
+
 		  $slide
 			.parent()
 			.find('img.lazy:eq(' + current + '), img.lazy:eq(' + prev_slide + '), img.lazy:eq(' + nxt_slide + ')')
@@ -191,9 +194,9 @@ $(window).load(function() {
 	  $container.masonry({
 		columnWidth: '.menu-category',
 		itemSelector: '.menu-category'
-	  });   
+	  });
 	});
-})(jQuery);	
+})(jQuery);
 </script>
 <?php } ?>
 
