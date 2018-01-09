@@ -63,7 +63,7 @@
 		</div>
 	</footer><!-- #colophon -->
 	<div class="container-fluid">
-		<div class="row" style="padding: 20px; background: #E27708; color: #fff; text-align: center; position: fixed; bottom:0; min-width:100%; z-index: 9999999;">
+		<div class="row" style="padding: 20px; background: #E27708; color: #fff; text-align: center; position: fixed; bottom:0; min-width:100%; z-index: 9999999; display:none;">
 			<p>The Wicked Wheel will be closed from December 11th &ndash; December 25th for the Holiday Season.</p>
 		</div>
 	</div>
