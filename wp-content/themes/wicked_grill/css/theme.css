@@ -678,6 +678,10 @@ clear: both;
 margin-top: 10px;
 }
 
+.support-content form p {
+	color:#FFF;
+}
+
 ul.menu li a{
 	color: #ffffff;
 	font-size: 20px;
@@ -699,7 +703,7 @@ ul.menu li a.active{
 }
 
 
-ul.menu li a::last-child:{
+ul.menu li a:last-child {
 	border-right:0;
 }
 
@@ -1281,7 +1285,7 @@ Media Queries
 	
 	footer .footer-partners a{
 		display:inline-block;
-		max-width: auto;
+		max-width: unset;
 		text-align: center;
 	}
 }
@@ -1821,7 +1825,7 @@ Media Queries
 	
 	footer .footer-partners a img {
 		width: auto;
-		max-width:auto;
+		max-width: unset;
 	}
 	
      #blue-overlay {
