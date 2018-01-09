@@ -62,11 +62,11 @@
         </div>
 		</div>
 	</footer><!-- #colophon -->
-	<div class="container-fluid">
+	<!-- <div class="container-fluid">
 		<div class="row" style="padding: 20px; background: #E27708; color: #fff; text-align: center; position: fixed; bottom:0; min-width:100%; z-index: 9999999;">
 			<p>The Wicked Wheel will be closed from December 11th &ndash; December 25th for the Holiday Season.</p>
 		</div>
-	</div>
+	</div> -->
 </div><!-- #page -->
 <script data-cfasync="true" async src="https://i.simpli.fi/dpx.js?cid=28739&action=100&segment=cnhiwickedwheelrt&m=1&sifi_tuid=26341"></script>
 <script data-cfasync="false" type="text/javascript" >
