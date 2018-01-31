@@ -19,11 +19,11 @@ $recur = get_post_meta( $post->ID, 'events_recur', true );
 if($recur == 'weekly'){
 	$fulldate = date('l', strtotime($start_date)).'s, ';
 	$start_date = advancedate($start_date,"+1 week");
-	$end_date = advancedate($end_date,"+1 week");
+	$end_date = strtotime($end_date);
 }elseif($recur == 'daily'){
 	$fulldate = 'Every day';
 	$start_date = advancedate($start_date,"+1 day");
-	$end_date = advancedate($end_date,"+1 day");
+    $end_date = strtotime($end_date);
 }else{
 	$start_date = strtotime($start_date);
 	$end_date = strtotime($end_date);
